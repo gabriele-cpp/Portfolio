@@ -21,7 +21,10 @@
             position: relative;
         }
         .container {
-            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 2;
         }
         .glitch {
@@ -100,10 +103,7 @@
         initParticles();
         animateParticles();
 
-        const words = ["Coming Soon", "Under Construction", "Stay Tuned", "i love cats", "Studying about u rn", "Gabriel Emil"];
-        function changeText() {
-            document.querySelector(".glitch").innerText = words[Math.floor(Math.random() * words.length)];
-        }
+        const words = ["Coming Soon", "Under Construction", "Stay Tuned", "i love cats", "thinking about u rn", "Gabriel Emil"];
         let index = 0;
         function changeText() {
             const textElement = document.querySelector(".glitch");
