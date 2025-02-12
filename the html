@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+        }
+        .glitch {
+            font-size: 24px;
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            25% { text-shadow: -2px -2px blue; }
+            50% { text-shadow: 2px -2px green; }
+            75% { text-shadow: -2px 2px yellow; }
+            100% { text-shadow: 2px 2px red; }
+        }
+        .countdown {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .notify-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 14px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .notify-btn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glitch">WEBSITE UNDER CONSTRUCTION</h1>
+        <p class="countdown">Launching in: <span id="timer"></span></p>
+        <button class="notify-btn" onclick="notifyMe()">Notify Me</button>
+    </div>
+    <script>
+        function startCountdown(duration) {
+            let timer = duration, days, hours, minutes, seconds;
+            setInterval(function () {
+                days = Math.floor(timer / (24 * 3600));
+                hours = Math.floor((timer % (24 * 3600)) / 3600);
+                minutes = Math.floor((timer % 3600) / 60);
+                seconds = Math.floor(timer % 60);
+                document.getElementById("timer").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                if (timer > 0) {
+                    timer--;
+                }
+            }, 1000);
+        }
+        startCountdown(7 * 24 * 3600); // 7 days countdown
+
+        function notifyMe() {
+            alert("We will notify you when the site is live!");
+        }
+    </script>
+</body>
+</html>
