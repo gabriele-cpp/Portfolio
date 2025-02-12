@@ -14,9 +14,8 @@ This website is deployed using **Vercel**.
 ### **Live Demo**
 🔗 [Check it out here](https://gbryll.vercel.app/)
 
-
 ## 📧 Contact Me
-💼 [LinkedIn](https://linkedin.com/in/yourprofile)  
+💼 [LinkedIn](https://www.linkedin.com/in/gabriel-emil-2029b0185/)  
 🐦 [X](https://x.com/GabEmiru)  
 📧 gabriel.emil@icloud.com  
 
