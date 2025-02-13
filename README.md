@@ -5,7 +5,6 @@ Welcome to my **portfolio website**! This site is currently under construction, 
 ## 🎨 Features
 - 🔥 Animated glitch effect
 - 🌌 Particle visualizer background
-- 🔄 Dynamic text transition
 - 🎯 Fully responsive design
 
 ## 📌 Deployment
